@@ -56,12 +56,14 @@ index a3238091..e5c4bde8 100644
 
 ## Build Steps
 
+see <https://github.com/gohugoio/hugo/blob/master/goreleaser.yml>
+
 ```sh
 git clone https://github.com/gohugoio/hugo.git
 cd hugo
 #modify some files
 go get github.com/litao91/goldmark-mathjax
-CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build --tags extended -ldflags="-s -w" -buildmode exe
+CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build --tags extended -ldflags="-s -w -extldflags '-static'" -buildmode exe
 ```
 
 ## References
