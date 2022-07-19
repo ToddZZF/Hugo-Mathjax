@@ -1,9 +1,9 @@
 # Hugo-Mathjax
-Self-Build Hugo with goldmark-mathjax Extension
+Self-Build Hugo with [goldmark-mathjax](https://github.com/litao91/goldmark-mathjax) Extension
 
 ## Modification
 
-same as <https://github.com/fastai/hugo-mathjax/blob/master/hugo.patch>, two files are mmodified
+Same as <https://github.com/fastai/hugo-mathjax/blob/master/hugo.patch>, two files are mmodified.
 
 - markup/goldmark/convert.go
 - markup/goldmark/goldmark_config/config.go
@@ -61,7 +61,7 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 #modify some files
 go get github.com/litao91/goldmark-mathjax
-CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build --tags extended -ldflags="-s -w"
+CGO_ENABLED=1 GOOS=windows GOARCH=amd64 go build --tags extended -ldflags="-s -w" -buildmode exe
 ```
 
 ## References
